@@ -76,6 +76,10 @@ set ls=2
 nnoremap j gj
 nnoremap k gk
 
+" switch tabs faster
+nnoremap <C-h> :tabp<CR>
+nnoremap <C-l> :tabn<CR>
+
 " yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
 
