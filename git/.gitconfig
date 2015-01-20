@@ -1,0 +1,26 @@
+[alias]
+        a  = add
+        bl = blame
+        br = branch
+        ch = checkout
+        cp = cherry-pick
+        cl = clone
+        c  = commit
+        d  = diff
+        dt = difftool
+        g  = grep
+        l  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        pl = pull
+        ps = push
+        rb = rebase
+        rs = reset
+        sh = show
+        s  = status
+        st = stash
+
+[color]
+        ui = auto
+
+[user]
+	email = mpatel678@gmail.com
+	name = cooltoast
