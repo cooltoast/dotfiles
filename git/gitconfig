@@ -8,6 +8,7 @@
         c  = commit
         d  = diff
         dt = difftool
+        f = fetch
         g  = grep
         l  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
         pl = pull
