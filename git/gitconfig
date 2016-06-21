@@ -16,6 +16,8 @@
         pl = pull
         ps = push
         rb = rebase
+        re = remote
+        rf = reflog
         rs = reset
         sh = show
         s  = status
@@ -27,3 +29,5 @@
 [user]
 	email = mpatel678@gmail.com
 	name = cooltoast
+[diff]
+	tool = vimdiff
