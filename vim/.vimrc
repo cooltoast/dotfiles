@@ -4,9 +4,6 @@ set background=dark
 " leader is space
 let mapleader = "\<Space>"
 
-" prevent screen clear after exiting
-set t_ti= t_te=
-
 " no delay when escaping
 set ttimeoutlen=0
 " show status line
