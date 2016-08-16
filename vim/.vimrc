@@ -28,6 +28,10 @@ inoremap <right> <nop>
 " remove gui options
 set guioptions=
 
+" wildmenu
+set wildmenu
+set wildmode=longest:full,full
+
 " continue indentation onto next line
 set autoindent
 " copy indentation structure of previous lines
