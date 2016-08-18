@@ -1,8 +1,16 @@
+" pathogen
+execute pathogen#infect()
+filetype plugin indent on
+syntax on
+
 " for better color readability against dark backgrounds
 set background=dark
 
-" leader is space
-let mapleader = "\<Space>"
+" fix backspace
+set backspace=indent,eol,start
+
+" ruler
+set ruler
 
 " no delay when escaping
 set ttimeoutlen=0
@@ -10,7 +18,6 @@ set ttimeoutlen=0
 set laststatus=2
 " modern encoding default
 set encoding=utf-8
-syntax on
 
 " map jk to esc in insert mode
 :imap jk <Esc>
@@ -58,6 +65,9 @@ set smartcase
 set incsearch
 " show matching bracket
 set showmatch
+" highlight search and remove highlights by pressing space
+set hlsearch
+map <Space> :nohlsearch<CR>
  
 " scroll faster
 nnoremap <C-e> 5<C-e>
@@ -123,3 +133,51 @@ if has("autocmd")
 else
   set autoindent                " always set autoindenting on
 endif " has("autocmd")
+
+" move current window through tabs and merge
+function MoveToPrevTab()
+  "there is only one window
+  if tabpagenr('$') == 1 && winnr('$') == 1
+    return
+  endif
+  "preparing new window
+  let l:tab_nr = tabpagenr('$')
+  let l:cur_buf = bufnr('%')
+  if tabpagenr() != 1
+    close!
+    if l:tab_nr == tabpagenr('$')
+      tabprev
+    endif
+    sp
+  else
+    close!
+    exe "0tabnew"
+  endif
+  "opening current buffer in new window
+  exe "b".l:cur_buf
+endfunc
+
+function MoveToNextTab()
+  "there is only one window
+  if tabpagenr('$') == 1 && winnr('$') == 1
+    return
+  endif
+  "preparing new window
+  let l:tab_nr = tabpagenr('$')
+  let l:cur_buf = bufnr('%')
+  if tabpagenr() < tab_nr
+    close!
+    if l:tab_nr == tabpagenr('$')
+      tabnext
+    endif
+    sp
+  else
+    close!
+    tabnew
+  endif
+  "opening current buffer in new window
+  exe "b".l:cur_buf
+endfunc
+
+nnoremap <C-m> :call MoveToNextTab()<CR><C-w>H
+nnoremap <C-n> :call MoveToPrevTab()<CR><C-w>H
