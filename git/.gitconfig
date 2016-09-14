@@ -7,12 +7,14 @@
         cl = clone
         c  = commit
         d  = diff
+        dc = diff --cached
         dt = difftool
-        f = fetch
+        f  = fetch
         g  = grep
-        i = init
-        l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-        m = merge
+        i  = init
+        l  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        ls = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --stat
+        m  = merge
         pl = pull
         ps = push
         rb = rebase
@@ -31,3 +33,5 @@
 	name = cooltoast
 [diff]
 	tool = vimdiff
+[pager]
+	diff = false
