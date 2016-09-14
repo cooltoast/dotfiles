@@ -33,5 +33,3 @@
 	name = cooltoast
 [diff]
 	tool = vimdiff
-[pager]
-	diff = false

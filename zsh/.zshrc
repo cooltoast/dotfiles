@@ -200,6 +200,12 @@ alias h='history'
 
 export EDITOR=vim
 
+# pager fixes
+# X - dont clear less pager screen after exit
+# F - automatically close if fits on screen
+# R - show color
+export LESS="-XFR"
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
