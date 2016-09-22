@@ -105,14 +105,14 @@ nnoremap j gj
 nnoremap k gk
 
 " switch tabs faster
-nnoremap <C-h> :tabp<CR>
-nnoremap <C-l> :tabn<CR>
+" nnoremap <C-h> :tabp<CR>
+" nnoremap <C-l> :tabn<CR>
 
-" switch splits
-" nnoremap <C-j> <C-w>j<CR>
-" nnoremap <C-k> <C-w>k<CR>
-" nnoremap <C-h> <C-w>h<CR>
-" nnoremap <C-l> <C-w>l<CR>
+"switch splits
+nnoremap <C-j> <C-w>j<CR>
+nnoremap <C-k> <C-w>k<CR>
+nnoremap <C-h> <C-w>h<CR>
+nnoremap <C-l> <C-w>l<CR>
 
 " yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
