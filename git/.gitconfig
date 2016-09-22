@@ -12,8 +12,8 @@
         f  = fetch
         g  = grep
         i  = init
-        l  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-        ls = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --stat
+        l  = log --graph --pretty=format:'%Cred%h %Cgreen(%cr) %Creset%s %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset' --abbrev-commit --date=relative
+        ls  = log --graph --pretty=format:'%Cred%h %Cgreen(%cr) %Creset%s %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset' --abbrev-commit --date=relative --stat
         m  = merge
         pl = pull
         ps = push
