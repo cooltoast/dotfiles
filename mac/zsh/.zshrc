@@ -101,10 +101,11 @@ alias pics='NODE_ENV=development BLUEBIRD_WARNINGS=0 nodemon --ignore assets --i
 alias pg-restart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log restart'
 
 # kubernetes
-alias kube='kubectl'
+alias k='kubectl'
 alias docc='docker-compose'
 alias stagconfig='cd ~/dev/infrastructure/kubernetes/staging && make config && cd -'
 alias prodconfig='cd ~/dev/infrastructure/kubernetes/prod && make config && cd -'
+kexec() { k exec -it "$1" /bin/bash; }
 
 export EDITOR=vim
 
