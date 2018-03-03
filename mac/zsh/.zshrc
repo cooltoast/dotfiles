@@ -106,6 +106,7 @@ alias docc='docker-compose'
 alias stagconfig='cd ~/dev/infrastructure/kubernetes/staging && make config && cd -'
 alias prodconfig='cd ~/dev/infrastructure/kubernetes/prod && make config && cd -'
 kexec() { k exec -it "$1" /bin/bash; }
+dexec() { docker exec -it -e COLUMNS=$COLUMNS -e LINES=$LINES -e TERM=$TERM "$1" /bin/bash; }
 
 export EDITOR=vim
 
