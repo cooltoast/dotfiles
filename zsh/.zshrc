@@ -198,6 +198,12 @@ alias g='git'
 # history alias
 alias h='history'
 
+# misc
+alias fucking='sudo'
+
+# kubernetes
+alias k='kubectl'
+alias docc='docker-compose'
 export EDITOR=vim
 
 # pager fixes

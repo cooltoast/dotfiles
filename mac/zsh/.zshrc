@@ -96,15 +96,11 @@ alias h='history'
 
 # misc
 alias fucking='sudo'
-alias picc='bin/gulp vendorBundle; bin/livereload public/css -e css & bin/gulp watch;'
-alias pics='NODE_ENV=development BLUEBIRD_WARNINGS=0 nodemon --ignore assets --ignore frontend --ignore public --watch .. config/server.js | bin/bunyan -l trace -o short;'
 alias pg-restart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log restart'
 
 # kubernetes
 alias k='kubectl'
 alias docc='docker-compose'
-alias stagconfig='cd ~/dev/infrastructure/kubernetes/staging && make config && cd -'
-alias prodconfig='cd ~/dev/infrastructure/kubernetes/prod && make config && cd -'
 kexec() { k exec -it "$1" /bin/bash; }
 dexec() { docker exec -it -e COLUMNS=$COLUMNS -e LINES=$LINES -e TERM=$TERM "$1" /bin/bash; }
 
@@ -116,8 +112,7 @@ export EDITOR=vim
 # R - show color
 export LESS="-XFR"
 
+export DEV="$HOME/dev"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
