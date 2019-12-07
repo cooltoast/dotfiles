@@ -222,4 +222,3 @@ HISTFILESIZE=2000
 HISTFILE=~/.zsh_history
 # append to the history file, don't overwrite it
 setopt APPEND_HISTORY
-

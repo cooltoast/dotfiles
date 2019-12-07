@@ -42,7 +42,7 @@ set encoding=utf-8
 
 " map jk to esc in insert mode
 :imap jk <Esc>
- 
+
 " use the damn hjkl keys
 noremap <up> <nop>
 noremap <down> <nop>
@@ -52,7 +52,7 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
- 
+
 " remove gui options
 set guioptions=
 
@@ -75,7 +75,7 @@ set shiftwidth=2
 set softtabstop=2
 " chhange existing tab characters to match current tab settings
 retab
- 
+
 " keep 5 lines visible below cursor
 set scrolloff=5
 
@@ -89,17 +89,17 @@ set showmatch
 " highlight search and remove highlights by pressing space
 set hlsearch
 map <Space> :nohlsearch<CR>
- 
+
 " scroll faster
 nnoremap <C-e> 5<C-e>
 nnoremap <C-y> 5<C-y>
- 
+
 " make : commands easier to type
 nnoremap ; :
- 
+
 " keep semicolon accessible for idk what
 nnoremap <leader>; ;
- 
+
 " show file name at bottom
 set modeline
 set ls=2
@@ -128,7 +128,7 @@ nnoremap Y y$
 if &term =~ "xterm\\|rxvt"
   let &t_SI = "\<Esc>]12;orange\x7"
   let &t_EI = "\<Esc>]12;gray\x7"
- 
+
   " reset cursor when vim exits
   autocmd VimLeave * silent !echo -ne "\033]112\007"
 endif

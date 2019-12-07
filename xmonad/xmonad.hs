@@ -5,7 +5,7 @@ import XMonad.Util.EZConfig
 
 main = do
     xmonad $ gnomeConfig
-      { focusedBorderColor = myFocusedBorderColor 
+      { focusedBorderColor = myFocusedBorderColor
       , modMask = myModMask
       } `additionalKeys` myExtraKeys
 
@@ -13,7 +13,7 @@ myFocusedBorderColor = "#3388ff"
 
 myModMask = mod1Mask
 
-myExtraKeys = 
+myExtraKeys =
   [
     ((mod, xK_g),
       safeSpawn "google-chrome" []
