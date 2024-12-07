@@ -120,3 +120,14 @@ HISTFILE=~/.zsh_history
 
 # append to the history file, don't overwrite it
 setopt APPEND_HISTORY
+
+# fnm
+FNM_PATH="/Users/markan/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/markan/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+# doom emacs
+export PATH="/Users/markan/.config/emacs/bin:$PATH"
