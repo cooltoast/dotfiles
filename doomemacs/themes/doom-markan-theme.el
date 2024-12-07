@@ -124,12 +124,17 @@
    ;; magit
    (magit-blame-heading :foreground orange :background bg-alt)
    ;; shit to make my eyes not bleed
-   (magit-diff-added :foreground (doom-darken green 0.2) :background (doom-blend green bg 0.1))
-   (magit-diff-added-highlight :foreground green :background (doom-blend green bg 0.2))
-   (diff-refine-added :inherit 'magit-diff-added-highlight)
-   (magit-diff-removed :foreground (doom-darken red 0.2) :background (doom-blend red bg 0.1))
-   (magit-diff-removed-highlight :foreground red :background (doom-blend red bg 0.2))
-   (diff-refine-removed :inherit 'magit-diff-removed-highlight)
+   (magit-diff-added :foreground green :background (doom-blend green bg 0.2))
+   (magit-diff-added-highlight :inherit 'magit-diff-added)
+   (diff-refine-added :inherit 'magit-diff-added)
+   (magit-diff-removed :foreground red :background (doom-blend red bg 0.2))
+   (magit-diff-removed-highlight :inherit 'magit-diff-removed)
+   (diff-refine-removed :inherit 'magit-diff-removed)
+   ;; this stuff is too dark otherwise
+   (magit-diff-context :inherit 'magit-diff-context-highlight)
+   (magit-diff-hunk-heading :inherit 'magit-diff-hunk-heading-highlight)
+   (magit-diff-conflict-heading :inherit 'magit-diff-hunk-heading-highlight)
+   (magit-diff-revision-summary :inherit 'magit-diff-revision-summary-highlight)
 
    ;; markdown
    ((markdown-blockquote-face &override) :foreground violet)

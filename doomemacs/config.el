@@ -77,3 +77,7 @@
 
 ;; Custom Keys
 (map! :n ";" 'evil-ex)
+
+;; Spacing stuff
+(setq-default tab-width 2)
+(setq-default evil-shift-width 2)
