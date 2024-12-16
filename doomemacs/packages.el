@@ -50,3 +50,5 @@
 ;; (unpin! t)
 
 (package! solaire-mode :disable t)
+(package! yasnippet)
+(package! yasnippet-snippets)

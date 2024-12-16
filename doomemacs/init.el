@@ -96,7 +96,7 @@
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        lookup              ; navigate your code and its documentation
-       ;;lsp               ; M-x vscode
+       lsp               ; M-x vscode
        magit               ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -159,8 +159,8 @@
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
 
-       python            ; beautiful is better than ugly
-       ;; ^ Need to pip install 'python-lsp-server[all]' pylsp-mypy
+       (python +lsp)     ; beautiful is better than ugly
+       ;; ^ Need to pip install 'python-lsp-server[all]' pylsp-mypy python-lsp-isort python-lsp-black
 
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs

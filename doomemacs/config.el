@@ -81,3 +81,23 @@
 ;; Spacing stuff
 (setq-default tab-width 2)
 (setq-default evil-shift-width 2)
+
+;; YASnippet
+(use-package! yasnippet
+  :config
+  (yas-global-mode 1)) ;; Global mode
+
+;; PyLSP
+(after! lsp-mode
+  (setq lsp-pylsp-plugins-flake8-enabled t
+        lsp-pylsp-plugins-pyflakes-enabled nil
+        lsp-pylsp-plugins-pycodestyle-enabled nil
+        lsp-pylsp-plugins-black-enabled t
+        lsp-pylsp-plugins-isort-enabled t
+        lsp-pylsp-plugins-mypy-enabled t))
+
+;; Run PyLSP formatter on save, might need to comment out if gets annoying
+(after! python
+  (add-hook 'python-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook #'lsp-format-buffer nil t))))
